@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://www.santa-laurensia.com/sutera/wp-content/uploads/2024/10/logo-las-286x300-1.png">
+  <title>Kartu Informasi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<label class="switch">
+  <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+  <span class="slider"></span></label>
+
+
+  <div class="header">
+   <a href="../index.html"> <img src="https://www.santa-laurensia.com/sutera/wp-content/uploads/2024/10/logo-las-286x300-1.png" alt="Logo" class="logo"></a>
+    <h1 class="title">Galeri Kelompok 1</h1>
+  </div>
+
+  <div class="container">
+    <div class="card big">
+      <img src="bg.jpg" alt="Foto 1">
+      <div class="card-content">
+        <h3>Kelompok 1 - INFORMATIKA</h3>
+        <p>Agak Lain memang guru 1 ini, sudah hitam, tugasnya susah lagi + pelit nilai tapi...</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/id/1025/400/200" alt="Foto 2">
+      <div class="card-content">
+        <h3>Siswa 1</h3>
+        <b><i>Dum vita est, spes est.</i></b>
+        <p>Selama masih ada kehidupan, masih ada harapan.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/id/1003/400/200" alt="Foto 3">
+      <div class="card-content">
+        <h3>siswa 2</h3>
+        <b><i>Dum vita est, spes est.</i></b>
+        <p>Selama masih ada kehidupan, masih ada harapan.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/id/1042/400/200" alt="Foto 4">
+      <div class="card-content">
+        <h3>Siswa 3</h3>
+       <b><i>Dum vita est, spes est.</i></b>
+        <p>Selama masih ada kehidupan, masih ada harapan.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/id/1062/400/200" alt="Foto 5">
+      <div class="card-content">
+        <h3>Siswa 4</h3>
+        <b><i>Dum vita est, spes est.</i></b>
+        <p>Selama masih ada kehidupan, masih ada harapan.</p>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal Zoom -->
+  <div class="modal" id="imageModal">
+    <span class="close" onclick="closeModal()">✖</span>
+    <img id="modalImg" src="" alt="Zoomed Image" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+:root {
+      --bg-gradient: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+      --card-bg: white;
+      --text-color: #333;
+      --neon-color: #00e0ff;
+    }
+
+    body.dark-mode {
+      --bg-gradient: linear-gradient(to bottom right, #0d1117, #1e293b);
+      --card-bg: #1f2937;
+      --text-color: #e5e7eb;
+      --neon-color: #00f7ff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    .header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+
+    .title {
+      font-size: 2rem;
+      margin-top: 0.5rem;
+      color: var(--neon-color);
+      text-shadow: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color);
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .toggle-btn:hover {
+      background: #023e8a;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    .card.big {
+      grid-column: span 3;
+    }
+
+    .card.big img {
+      height: 250px;
+      cursor: zoom-in;
+    }
+
+    /* Modal zoom fullscreen */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Dark mode switch (slide) */
+.switch {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 28px;
+  z-index: 10;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* Checked state */
+input:checked + .slider {
+  background-color: #00b4d8;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
